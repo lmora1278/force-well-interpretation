@@ -50,3 +50,7 @@ Open 01-sonic-regression.ipynb with the DSM Project kernel. Saved outputs show t
 ## FORCE sandstone classification study
 
 Open 02-sandstone-classification.ipynb with the DSM Project kernel. It explains class imbalance, convergence, confusion patterns, threshold trade-offs and per-well variation. Run all cells with the audited local archive available. Committed outputs are cleared per the notebook standard; an executed review copy is saved locally under artifacts/force_logistic/02-sandstone-classification.executed.ipynb. The primary threshold remains 0.5 and final-test wells remain excluded.
+
+## FORCE tree comparison
+
+03-tree-comparison.ipynb compares the shallow tree, linear regression and mean baseline on development wells. It covers complexity selection, residuals, per-well failures and extrapolation. Outputs are cleared; the executed review copy is local under artifacts/force_tree/.
