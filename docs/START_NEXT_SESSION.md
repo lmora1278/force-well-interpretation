@@ -1,8 +1,8 @@
 # Resume the FORCE project
 
 Open C:\Users\lmora\INDE577\force-well-interpretation in VS Code.
-Read docs/SESSION_CHECKPOINT.md, docs/PROJECT_OVERVIEW.md, and
-docs/LINEAR_REGRESSION.md. The linear-regression development milestone is tested
-and saved locally on feature/linear-regression. Confirm its commit/push/merge
-state before starting further work. Next: the applied regression notebook and
-remaining approved algorithms. Reserved final-test wells remain excluded.
+Read docs/SESSION_CHECKPOINT.md for current status. Open
+notebooks/01-sonic-regression.ipynb to review the saved analysis and figures.
+The notebook milestone is on feature/regression-notebook; verify its publication
+and merge state before starting the logistic-regression milestone.
+Keep all 20 final-test wells excluded from model development.
