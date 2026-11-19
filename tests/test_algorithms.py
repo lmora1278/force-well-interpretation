@@ -59,6 +59,7 @@ def test_student_registry_exposes_only_explicit_implementations() -> None:
         "batch_linear_regression",
         "batch_logistic_regression",
         "lecture_linear_regression",
+        "squared_error_tree",
     )
     estimator = create_student_algorithm("batch_linear_regression", learning_rate=0.05)
     assert isinstance(estimator, BatchLinearRegressor)

@@ -2,40 +2,38 @@
 
 Updated November 19, 2026. Owner: Liam Mora.
 Working folder: C:\Users\lmora\INDE577\force-well-interpretation.
-Branch: feature/classification-notebook.
+Branch: feature/regression-tree.
 
 ## Completed
 
-- Logistic regression merged into main (7ae32b9).
-- Added notebooks/02-sandstone-classification.ipynb as a self-contained case study.
-- Documents provenance, complete-case coverage, whole-well splits, training-only
-  scaling, model mathematics, implementation verification and limitations.
-- Five figures cover training distributions, convergence, confusion and ranking,
-  threshold sensitivity, and between-well variation.
-- The fixed 0.5 policy remains unchanged. Balanced accuracy is 0.6530,
-  precision 0.4556 and recall 0.3829; ordinary accuracy is below the baseline.
-- No final-test wells were scored. Exploratory threshold comparisons are not
-  a newly selected policy. The classifier is not promoted for autonomous use.
-- Committed notebook outputs are cleared per docs/NOTEBOOK_CASE_STUDY_STANDARD.md.
-  The executed local review copy and figures are in artifacts/force_logistic/.
-- Added notebook contract and clean-kernel execution tests. The full-data test
-  skips when the ignored field archive is unavailable, as on CI.
+- Classification notebook merged into main (5a8f2e7).
+- Added SquaredErrorTreeRegressor and squared_error_tree registry entry.
+- Mean leaves and sorted-prefix squared-error splits follow Lecture 14.
+- Depth and leaf-size stopping, deterministic ties, input validation and
+  inspectable fitted nodes implemented and tested.
+- Compared a prespecified six-candidate grid using the same 14,500 training
+  observations and 135,154 validation observations as linear regression.
+- Selected depth 4 / minimum leaf size 50 by pooled validation MAE.
+- Development MAE 9.327 versus linear 10.519 and mean baseline 21.574 us/ft.
+- Trusted reference predictions match within approximately 1.42e-13.
+- All candidates and per-well diagnostics saved locally in artifacts/force_tree/.
+- Method, results and limitations saved in docs/REGRESSION_TREE.md.
 
 ## Next
 
-Review the notebook, commit and push feature/classification-notebook, then open
-a pull request and merge after both remote checks pass. No commit or remote
-publication was performed during this implementation step.
+Review, commit and push feature/regression-tree, then open a pull request and
+merge after both remote checks pass. No commit or remote publication was performed
+during implementation.
 
-Next implementation: shallow squared-error regression tree for sonic prediction,
-using the professor's tree approach, with whole-well validation and a trusted
-reference. PCA, rock-type diagnostics, repeated-split sensitivity, final evaluation
-and product/release requirements remain pending. Preserve all 20 reserved wells
-until modeling and evaluation choices are frozen.
+Next: comparative sonic-regression notebook, including tree complexity, per-well
+errors, residuals and extrapolation limits. The tree's validation score is tuning
+evidence, not a final-test estimate. PCA, rock-type diagnostics, repeated-split
+sensitivity and product/release requirements remain pending. Keep all 20 reserved
+wells excluded until modeling and evaluation choices are frozen.
 
 PR titles, descriptions and commit messages describe methodology and changes.
 Specific course references remain in code comments and supporting documentation.
 
 ## Verification
 
-Full local suite: 108 tests passed in 71.24 seconds, with the two existing dependency warnings. Ruff passed. The new notebook executed from a clean kernel; all five figures were visually reviewed. Git whitespace checks passed.
+Full local suite: 121 tests passed in 71.04 seconds, with two existing dependency warnings. Ruff and Git whitespace checks passed. The development experiment completed successfully; the final-test wells remain excluded.

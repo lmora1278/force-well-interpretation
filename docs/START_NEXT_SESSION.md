@@ -1,14 +1,12 @@
 # Resume the FORCE project
 
 Open C:\Users\lmora\INDE577\force-well-interpretation in VS Code.
-Read docs/SESSION_CHECKPOINT.md and docs/LOGISTIC_REGRESSION.md.
+Read docs/SESSION_CHECKPOINT.md and docs/REGRESSION_TREE.md.
 
-The classification notebook milestone is saved locally on
-feature/classification-notebook. Confirm commit/push/merge state before continuing.
-Review notebooks/02-sandstone-classification.ipynb; its executed local copy is
-artifacts/force_logistic/02-sandstone-classification.executed.ipynb.
-The committed notebook intentionally has cleared outputs.
+The tree implementation and development comparison are saved locally on
+feature/regression-tree. Confirm commit/push/merge state before continuing.
+Next: a comparative sonic-regression notebook with the selected shallow tree,
+linear model and baseline. No environment rebuild is needed.
 
-Next: implement the shallow regression tree comparison for sonic reconstruction.
-Keep the classification threshold at 0.5 for the initial comparison and keep
-the 20 final-test wells excluded. Do not repeat completed environment setup.
+The depth-4/minimum-leaf-50 candidate was selected on development validation;
+do not treat its MAE as final-test evidence. Keep the 20 reserved wells excluded.
