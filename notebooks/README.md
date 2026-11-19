@@ -42,3 +42,7 @@ not need the lecture or commit history to understand the investigation.
 Reference reports under `examples/` show completed course-topic stories. They
 are models of reasoning, not submissions. Follow the full
 [`notebook case-study standard`](../docs/NOTEBOOK_CASE_STUDY_STANDARD.md).
+
+## FORCE regression study
+
+Open 01-sonic-regression.ipynb with the DSM Project kernel. Saved outputs show the development analysis. Full reruns require the audited archive in data/local/force-train.zip. The 20 final-test wells remain excluded. See docs/LINEAR_REGRESSION.md for the method and reproduction steps.

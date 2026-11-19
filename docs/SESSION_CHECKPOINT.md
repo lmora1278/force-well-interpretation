@@ -2,29 +2,31 @@
 
 Updated November 19, 2026. Owner: Liam Mora.
 Working folder: C:\Users\lmora\INDE577\force-well-interpretation.
-Branch: feature/linear-regression.
+Branch: feature/regression-notebook.
 
 ## Completed
 
-- FORCE data milestone merged into main (242f363).
-- Implemented and registered LectureLinearRegressor using Lecture 10 full-MSE gradients.
-- Added reproducible 250-row-per-well training sampling and training-only scaling.
-- Compared custom regression with a training-mean baseline and least squares.
-- Validation uses 20 whole wells; all 20 final-test wells remain excluded.
-- Validation MAE: baseline 21.5744; custom linear 10.5195 microseconds per foot.
-- Optimization converged after 587 updates and agrees closely with least squares.
-- Full suite: 86 passed, two existing dependency warnings. Ruff checks passed.
-- Methods and limitations saved in docs/LINEAR_REGRESSION.md.
-- Detailed reproducible outputs are local in artifacts/force_linear/ (ignored by Git).
+- Data and linear-regression milestones merged into main (b20772f).
+- Added notebooks/01-sonic-regression.ipynb with saved executed outputs.
+- Notebook imports package experiment code and uses only development wells.
+- Includes source, scope, training-only scaling, mathematical model, verification,
+  convergence, pooled metrics, prediction/residual density plots, and per-well errors.
+- Linear regression improves MAE in 19 of 20 validation wells; high DTC values
+  show systematic underprediction. Limitations and unfinished analyses are explicit.
+- Experiment now returns results to the notebook and retains CLI JSON output.
+- Clean-kernel notebook execution passed; all three plots visually inspected.
+- Full local suite: 88 passed, two existing dependency warnings. Ruff passed.
+- CI checks notebook structure; full FORCE execution is explicitly skipped when
+  the ignored field archive is absent. Local full-data execution passed.
 
 ## Next
 
-User reviews and commits this local milestone, pushes feature/linear-regression,
-then opens a pull request and waits for passing checks before merging.
-No commit or remote publication of this milestone was performed during implementation.
-Next scientific work: a question-led regression notebook with convergence,
-prediction/residual and well-level plots, followed by logistic regression and a
-shallow regression tree. PCA and sensitivity analyses remain planned.
+User reviews saved notebook, commits and pushes feature/regression-notebook,
+then opens a pull request and waits for checks before merging.
+No commit or push of this milestone was performed during implementation.
+Next model: logistic regression for sandstone-labelled interval screening.
+Shallow regression tree, PCA, rock-type diagnostics and repeated-split sensitivity
+remain planned. Do not score reserved final-test wells before freezing choices.
 
-Do not score final-test wells until methods and choices are frozen.
-The existing Wine notebooks are inherited examples, not FORCE results.
+Naming preference: PR titles, descriptions and commit messages describe methods
+and changes. Specific course references remain in code comments and documentation.

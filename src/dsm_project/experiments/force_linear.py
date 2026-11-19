@@ -134,8 +134,14 @@ def run_experiment():
             "training_mse": fitted.loss_history_,
         }
     ).to_csv(destination / "loss_history.csv", index=False)
-    print(json.dumps(report, indent=2))
+    return {
+        "report": report,
+        "training": training,
+        "validation": validation,
+        "models": models,
+        "per_well": pd.DataFrame(per_well),
+    }
 
 
 if __name__ == "__main__":
-    run_experiment()
+    print(json.dumps(run_experiment()["report"], indent=2))
