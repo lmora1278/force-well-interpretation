@@ -46,3 +46,7 @@ are models of reasoning, not submissions. Follow the full
 ## FORCE regression study
 
 Open 01-sonic-regression.ipynb with the DSM Project kernel. Saved outputs show the development analysis. Full reruns require the audited archive in data/local/force-train.zip. The 20 final-test wells remain excluded. See docs/LINEAR_REGRESSION.md for the method and reproduction steps.
+
+## FORCE sandstone classification study
+
+Open 02-sandstone-classification.ipynb with the DSM Project kernel. It explains class imbalance, convergence, confusion patterns, threshold trade-offs and per-well variation. Run all cells with the audited local archive available. Committed outputs are cleared per the notebook standard; an executed review copy is saved locally under artifacts/force_logistic/02-sandstone-classification.executed.ipynb. The primary threshold remains 0.5 and final-test wells remain excluded.
