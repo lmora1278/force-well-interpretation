@@ -6,6 +6,7 @@ from collections.abc import Callable
 from typing import Any
 
 from dsm_project.algorithms.linear import BatchLinearRegressor
+from dsm_project.algorithms.student.linear_regression import LectureLinearRegressor
 
 EstimatorFactory = Callable[..., Any]
 
@@ -14,6 +15,7 @@ EstimatorFactory = Callable[..., Any]
 # this mapping.
 STUDENT_ALGORITHMS: dict[str, EstimatorFactory] = {
     "batch_linear_regression": BatchLinearRegressor,
+    "lecture_linear_regression": LectureLinearRegressor,
 }
 
 

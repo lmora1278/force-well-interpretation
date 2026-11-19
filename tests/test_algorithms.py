@@ -55,10 +55,11 @@ def test_estimators_reject_use_before_fit() -> None:
 
 
 def test_student_registry_exposes_only_explicit_implementations() -> None:
-    assert registered_student_algorithms() == ("batch_linear_regression",)
-    estimator = create_student_algorithm(
-        "batch_linear_regression", learning_rate=0.05
+    assert registered_student_algorithms() == (
+        "batch_linear_regression",
+        "lecture_linear_regression",
     )
+    estimator = create_student_algorithm("batch_linear_regression", learning_rate=0.05)
     assert isinstance(estimator, BatchLinearRegressor)
 
     with pytest.raises(ValueError, match="Unknown student algorithm"):
