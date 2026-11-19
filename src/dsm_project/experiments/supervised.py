@@ -143,6 +143,11 @@ def evaluate_supervised_estimator(
     if task.kind is TaskKind.UNSUPERVISED or task.target_column is None:
         raise ValueError("Use an unsupervised runner for this task")
 
+    if config.dataset.get('adapter') == 'force':
+        raise ValueError(
+            'Use FORCE whole-well development partitions; row splitting is forbidden.'
+        )
+
     features = dataset.observations.loc[:, task.feature_columns]
     targets = dataset.observations.loc[:, task.target_column]
     seed = int(config.split.get("random_state", 438))

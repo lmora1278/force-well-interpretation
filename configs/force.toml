@@ -1,0 +1,29 @@
+[project]
+name = "Reconstructing Missing Sonic Logs in Unseen Wells"
+intended_user = "An analyst reviewing incomplete well records"
+
+[dataset]
+adapter = "force"
+name = "FORCE 2020 training partition"
+source = "https://zenodo.org/records/4351156"
+license = "NLOD 2.0; see original release terms"
+path = "data/local/force-train.zip"
+observation_unit = "one depth measurement in a well"
+identifier = "observation_id"
+
+[tasks.regression]
+name = "reconstruct sonic slowness"
+target = "DTC"
+metric = "root_mean_squared_error"
+
+[tasks.classification]
+name = "screen sandstone labels"
+target = "sandstone"
+metric = "balanced_accuracy"
+
+[split]
+strategy = "whole_well"
+random_state = 577
+test_fraction = 0.20408163265306123
+reserved_manifest = "configs/reserved_wells.json"
+validation_wells = 20
