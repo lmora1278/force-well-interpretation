@@ -54,3 +54,7 @@ Open 02-sandstone-classification.ipynb with the DSM Project kernel. It explains 
 ## FORCE tree comparison
 
 03-tree-comparison.ipynb compares the shallow tree, linear regression and mean baseline on development wells. It covers complexity selection, residuals, per-well failures and extrapolation. Outputs are cleared; the executed review copy is local under artifacts/force_tree/.
+
+## FORCE PCA representation
+
+04-pca-representation.ipynb examines standardized measurement redundancy, two-axis visualization, reconstruction loss and downstream sonic prediction. PCA fits training predictors only. Outputs are cleared; the executed review copy is local under artifacts/force_pca/.

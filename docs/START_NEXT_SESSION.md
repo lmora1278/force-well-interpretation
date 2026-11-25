@@ -1,13 +1,11 @@
 # Resume the FORCE project
 
 Open C:\Users\lmora\INDE577\force-well-interpretation in VS Code.
-Read docs/SESSION_CHECKPOINT.md and docs/PROJECT_OVERVIEW.md.
-Confirm commit/push/merge state of feature/tree-comparison-notebook.
+Read docs/SESSION_CHECKPOINT.md and docs/PCA_ANALYSIS.md.
+Confirm commit/push/merge state of feature/pca-analysis before creating a new branch.
 
-Review notebooks/03-tree-comparison.ipynb, or the executed local copy at
-artifacts/force_tree/03-tree-comparison.executed.ipynb. No environment rebuild
-is needed. The notebook compares linear and tree predictions on development
-wells and documents substantial well-level differences.
-
-Next scope: representation study and remaining robustness diagnostics, aligned
-with the course materials and project requirements. Do not score reserved wells.
+Next: robustness and rock-type diagnostics, including the planned median baseline
+and repeated whole-well development evaluation. No environment rebuild is needed.
+Keep all 20 final-test wells excluded and preserve all candidate results.
+The PCA notebook is notebooks/04-pca-representation.ipynb; its executed local copy
+is artifacts/force_pca/04-pca-representation.executed.ipynb.
