@@ -23,7 +23,7 @@ Split by whole wells before model selection or fitting preprocessing. Preserve t
 ## Core implementation and useful additions
 
 1. Custom linear regressor: scaled gradient descent, explicit objective and gradients, convergence checks, reusable fitted interface, analytic tests and trusted least-squares comparison. The template's existing exemplar does not count as a new project implementation.
-2. Custom logistic classifier: stable binary loss and sigmoid, gradients, regularization, decision threshold, reusable interface, gradient and reference checks.
+2. Custom logistic classifier: stable binary loss and sigmoid, gradients, unregularized fitting, fixed 0.5 decision threshold, reusable interface, gradient and reference checks.
 3. Custom shallow regression tree: implement squared-error split selection, recursive partitioning, stopping rules and leaf predictions. Verify hand-computable cases and trusted reference agreement. Compare with linear regression on identical well-level boundaries. A classification-tree extension remains optional.
 4. PCA: examine redundancy and visualization in standardized inputs; test whether the projection helps interpret model limitations. Do not claim clusters or projections are geological truth.
 5. Optional k-means or kNN only when it answers an additional useful question and does not displace required evidence.
@@ -37,7 +37,7 @@ The original template separately asks for every applicable course algorithm and 
 ## Evaluation and evidence
 
 - Regression: training-median baseline, MAE and RMSE in source units, per-well residuals, comparisons with linear and nonlinear references.
-- Classification: majority baseline, prevalence, balanced accuracy, precision/recall, average precision, confusion matrix and validation-only threshold selection. Scores must not be described as calibrated probabilities without calibration evidence.
+- Classification: majority baseline, prevalence, balanced accuracy, precision/recall, average precision, confusion matrix and development-only threshold exploration; the retained threshold is 0.5. Scores must not be described as calibrated probabilities without calibration evidence.
 - Uncertainty: respect well dependence. Repeated development splits and well-level summaries; no row-independent confidence interval pretending adjacent depths are independent.
 - Failures: incomplete logs, outliers, rare rock types, mixed-label ambiguity, poor-performing wells, and measurements outside the supported range.
 - Tests: analytic examples, finite-difference gradients, invalid inputs, train-only transformations, disjoint well splits, serialization, trusted-reference agreement and API behavior.
@@ -58,3 +58,10 @@ Question-led notebooks for data/baselines, sonic estimation, sandstone-label cla
 
 At each working session, save artifacts and record the next action. Once a new remote repository is confirmed, commit and push reviewed checkpoints. No old project repository history is part of this workspace.
 
+
+## Pre-test decision record
+
+EVALUATION_PLAN.md records the November 25 final-evaluation decisions.
+REQUIREMENTS_AUDIT.md records remaining evidence and the unresolved broader
+applicable-algorithm wording. These supplement, rather than replace, the approved
+project question and the professor's original checklist.
