@@ -58,3 +58,7 @@ Open 02-sandstone-classification.ipynb with the DSM Project kernel. It explains 
 ## FORCE PCA representation
 
 04-pca-representation.ipynb examines standardized measurement redundancy, two-axis visualization, reconstruction loss and downstream sonic prediction. PCA fits training predictors only. Outputs are cleared; the executed review copy is local under artifacts/force_pca/.
+
+## FORCE robustness study
+
+05-robustness-analysis.ipynb compares fixed models across five overlapping whole-well development splits, with per-well and rock-type failures, eligibility coverage, and sandstone-screening limits. No final-test scoring or retuning occurs. Outputs are cleared; the executed review copy and figures are local under artifacts/force_robustness/.
