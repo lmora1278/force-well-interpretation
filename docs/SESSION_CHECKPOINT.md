@@ -1,35 +1,32 @@
 # Session checkpoint
 
 Updated November 25, 2026. Owner: Liam Mora.
-Branch: feature/robustness-notebook.
+Branch: feature/evaluation-plan.
 
-## Completed
+## Completed this milestone
 
-- Robustness runner and report merged into main (85ecb4b).
-- Added notebooks/05-robustness-analysis.ipynb, interpreting the five fixed-model
-  whole-well development splits without retuning or final-test scoring.
-- Included eligibility coverage, pooled and equal-weight well errors, individual
-  well comparisons, rock-type support and errors, and classification limitations.
-- Four figures and an executed notebook are saved locally under
-  artifacts/force_robustness/. Tracked notebook outputs remain cleared.
-- The tree improves pooled MAE over linear on all five repeats, but has worse
-  RMSE on one. Both models underperform the median baseline for rock code 90000
-  on seed 577. The classifier's recall remains limited at threshold 0.5.
-- Repeated splits overlap and follow development decisions; their ranges are
-  descriptive sensitivity, not confidence intervals or independent test estimates.
+- Robustness notebook merged into main (8583c43).
+- Inspected supplied assignment/checklist, current implementations, service/artifact
+  scaffolding and unfinished product documentation.
+- Added EVALUATION_PLAN.md: selected tree, retained comparisons, fixed fitting on
+  78 development wells, 20 reserved wells, metrics, input support and provenance.
+- Added REQUIREMENTS_AUDIT.md separating implemented evidence from remaining work.
+- Corrected the older implementation plan's regularization/threshold wording to
+  match the implemented unregularized classifier and retained 0.5 threshold.
+- No final-test scoring, refitting, code change, commit or remote publication.
 
 ## Next
 
-Commit and push this notebook milestone, then merge after remote checks pass.
-Implementation did not commit, push or publish remotely.
-Next review the assignment and project checklist, record the model-selection
-and supported-input decisions, and freeze the final-evaluation protocol.
-Keep all 20 reserved wells excluded until that record is complete.
+Commit/push this documentation milestone and merge after remote checks pass.
+Then complete product/dataset contracts and implement the frozen final evaluation
+and artifact pipeline, tested with synthetic/development data before final scoring.
+Align the configuration's regression metric with actual MAE-based selection.
+Keep all reserved wells excluded until the committed execution gates are met.
 
-Remaining work includes applicable product/interface, model and dataset cards,
-monitoring/operations evidence, final evaluation, release and presentation.
-Do not claim full rubric completion before auditing those deliverables.
+Resolve broader applicable-algorithm wording before full compliance sign-off.
+API/UI adaptation, operational exercise, model card, release and presentation remain.
 
 ## Verification
 
-Six targeted checks passed in 46.01 seconds, including complete fresh-kernel notebook execution and reserved-well isolation tests. One existing Windows event-loop warning was non-blocking. Ruff and Git whitespace checks passed; all four figures were visually reviewed. The full suite was not rerun for this notebook-only milestone.
+Documentation was checked against existing model parameters, sampling and prior
+results. No numerical experiments were rerun for this documentation-only milestone.
