@@ -1,40 +1,34 @@
 # Session checkpoint
 
-Updated November 24, 2026. Owner: Liam Mora.
-Branch: feature/pca-analysis.
+Updated November 25, 2026. Owner: Liam Mora.
+Branch: feature/robustness-analysis.
 
 ## Completed
 
-- Prior tree-comparison notebook merged; started from clean main.
-- Added training-only standardized PCA experiment and representation notebook.
-- Reused the fixed regression sample and well boundaries; no final-test scoring.
-- PCA uses the professor template's library-based approach, not a new core custom algorithm.
-- Two components retain 91.02% of training variance. Validation MAE is 10.271
-  versus uncompressed linear 10.519 us/ft. This modest gain is provisional.
-- Full three-axis rotation matches the uncompressed linear model within 5.69e-14.
-- Added synthetic invariants and clean-kernel notebook tests.
-- Documented results, source alignment and limitations in docs/PCA_ANALYSIS.md.
-- Outputs cleared for Git. Executed notebook, three reviewed figures and numeric
-  diagnostics remain locally in artifacts/force_pca/.
+- PCA merged into main (0701430).
+- Added fixed-model robustness runner: five whole-well development holdouts,
+  seeds 577–581, with all 20 final-test wells excluded.
+- Added training-median baseline alongside the existing mean baseline.
+- Retained linear, depth-4/leaf-50 tree and PCA2-linear candidates without retuning.
+- Repeated logistic screening at fixed 0.5 with the prior baseline.
+- Saved pooled, per-well and lithology-slice metrics, coverage, split/sample
+  identities, convergence and classification flag rates locally.
+- All iterative fits converged. Tree MAE beats linear on all five repeats,
+  but RMSE is worse on one; classification recall remains limited.
+- Detailed tables and caveats saved in docs/ROBUSTNESS_ANALYSIS.md.
 
 ## Next
 
-Commit and push feature/pca-analysis, open a PR and merge after remote checks pass.
+Commit and push this milestone, then merge after both remote checks pass.
 No commit or remote publication was performed during implementation.
+Next: applied robustness notebook, followed by model-selection freeze and product
+documentation/interface work. Keep every reserved well excluded until the final
+evaluation protocol is frozen. Repeated development splits are not final testing.
 
-Next milestone: robustness and rock-type error analysis. Add the training-median
-baseline required by PROJECT_OVERVIEW.md while retaining the existing mean baseline.
-Evaluate repeated grouped development splits without accessing reserved final wells.
-Do not expand the candidate grid merely to chase a favorable validation result.
-No PCA dimension or new production policy has been selected.
-
-Final evaluation, dataset/model/product documentation, interface and operations
-evidence, final release and presentation remain pending. Review the full checklist
-before claiming rubric completion. Keep all 20 final-test wells reserved.
-
-Naming preference: methodology-focused PRs and commits; course citations in
-supporting documentation and code comments.
+The project still needs the applicable template product/operations evidence,
+final evaluation, tagged release and presentation. Do not claim full rubric
+completion until the checklist is reviewed against the final deliverables.
 
 ## Verification
 
-Full suite completed with 127 passing tests and one notebook-heading check failure. The heading was corrected and that check passed on rerun: all 128 checks are now resolved. The clean-kernel PCA integration passed. Two existing dependency warnings remain. Ruff passed; three notebook figures were visually reviewed.
+Full local suite: 132 tests passed in 134.35 seconds, with two existing dependency warnings. Ruff and Git whitespace checks passed. The five-split field experiment completed; every iterative fit converged.
