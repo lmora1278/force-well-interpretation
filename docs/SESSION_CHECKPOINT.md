@@ -1,28 +1,30 @@
 # Session checkpoint
 
 Updated November 26, 2026. Owner: Liam Mora.
-Branch: feature/product-data-contracts.
+Branch: feature/final-model-artifacts.
 
 ## Completed
 
-- Evaluation plan merged in ca555b6; decision commit 06e82d4.
-- Replaced product-contract prompts with FORCE users, tasks, scope, evaluation,
-  input/output policy, intended system behavior and implementation status.
-- Completed dataset provenance, schema, eligibility, access, CI fixture and limits.
-- Updated the requirements audit to distinguish documented contracts from
-  still-pending implementation. No final fits or reserved-well scoring performed.
+- Product/data contracts merged in e57cacb.
+- Added frozen candidate fitting, training-only support bounds and provenance.
+- Added non-overwriting bundles with integrity-checked trusted local loading.
+- Require convergence and a clean source revision for the field-data artifact command.
+- Aligned FORCE adapter/config metric declarations with actual MAE selection.
+- Saved reproduction steps in FINAL_MODEL_ARTIFACTS.md.
+- Synthetic checks passed; full field-data artifact creation is deferred until merge.
+- No final-test scoring, commit, push or remote publication performed here.
 
 ## Next
 
-Commit and push this milestone, then merge after automated checks pass.
-Next implement the frozen final fitting/artifact pipeline and support bounds,
-testing synthetic/development boundaries before reserved scoring. Align both
-config and adapter regression-metric declarations with MAE-based selection.
-FORCE API/UI, operations exercise, model card, solo ownership, release and
-presentation remain. Broader algorithm-scope wording remains an open audit item.
+Commit/push and merge this milestone after automated checks pass. Pull merged
+main locally, then create the next branch. With a clean revision, fit the actual
+78 development wells and inspect the saved artifact without scoring the 20
+reserved wells. Implement/test final evaluation separately before opening scores.
+See EVALUATION_PLAN.md for the immutable evaluation decisions.
+
+API/UI adaptation, model card, operations exercise, ownership documentation,
+release and presentation remain. Broader algorithm-scope wording is still open.
 
 ## Verification
 
-Documentation checked against the saved evaluation plan, data adapter, manifest,
-development counts and synthetic-fixture tests. No numerical reruns are needed
-for this documentation-only milestone. No commit or remote publication performed.
+Focused artifact/data checks: 23 passed. Full suite: 145 passed in 326.41 seconds, with two existing non-blocking dependency warnings. Ruff and whitespace checks passed. The command help entry point was checked without starting a field-data fit.

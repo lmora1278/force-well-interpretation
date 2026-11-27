@@ -90,7 +90,7 @@ class ForceAdapter:
                 TaskKind.REGRESSION,
                 FEATURES,
                 "DTC",
-                "root_mean_squared_error",
+                "mean_absolute_error",
             ),
             "classification": TaskDefinition(
                 "screen sandstone labels",
