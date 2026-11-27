@@ -14,7 +14,7 @@ identifier = "observation_id"
 [tasks.regression]
 name = "reconstruct sonic slowness"
 target = "DTC"
-metric = "root_mean_squared_error"
+metric = "mean_absolute_error"
 
 [tasks.classification]
 name = "screen sandstone labels"
