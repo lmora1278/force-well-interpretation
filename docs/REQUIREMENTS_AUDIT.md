@@ -1,6 +1,6 @@
 # Requirements audit before final evaluation
 
-Reviewed November 25, 2026 by artifact inspection. Owner: Liam Mora.
+Reviewed November 25, 2026; contract status updated November 26, 2026. Owner: Liam Mora.
 Sources: ASSIGNMENT.md, PROJECT_CHECKLIST.md, NOTEBOOK_CASE_STUDY_STANDARD.md,
 PROJECT_OVERVIEW.md and PROJECT_PLAN.md. This is an audit of the local supplied
 requirements, not a claim that newer online course instructions were checked.
@@ -10,14 +10,14 @@ the original syllabus was not re-extracted in this review.
 | Requirement | Evidence/status | Remaining action |
 | --- | --- | --- |
 | Coherent question and scope | Project overview and five applied notebooks | Consolidate final README and presentation |
-| Data access, provenance and whole-well boundaries | FORCE adapter, manifest, data report and synthetic tests | Complete DATASET_CARD.md and reproducible acquisition instructions |
+| Data access, provenance and whole-well boundaries | FORCE adapter, manifest, data report and synthetic tests | Dataset card and acquisition instructions completed; verify in final clean-clone review |
 | Regression, classification, representation | Custom linear/tree, logistic, supporting library PCA | Preserve task limits and custom/library distinctions |
 | Correct custom implementations | Analytic, gradient, trusted-reference and failure tests | Include final integrated checks |
 | Clean-kernel case studies | Notebooks 01–05 and execution tests | Final evaluation/product narrative; review unused template notebook |
 | Baselines, losing candidates and failures | Mean/median/prior comparisons and method/robustness reports | Preserve all in final evidence |
 | Uncertainty and dependence | Whole-well repeats and per-well diagnostics | Final paired well summaries; no independent-row claims |
-| Selection before test access | EVALUATION_PLAN.md prepared; 20 wells unscored | Commit/merge, then implement and verify frozen runner |
-| Product and dataset contracts | PRODUCT_CONTRACT.md and DATASET_CARD.md still contain prompts | Replace with FORCE-specific content |
+| Selection before test access | EVALUATION_PLAN.md merged in ca555b6; 20 wells unscored | Implement and verify frozen runner |
+| Product and dataset contracts | FORCE-specific contracts completed November 26 | Implement and test the documented system requirements |
 | Model card and versioned artifact | Template bundle infrastructure only; MODEL_CARD.md still prompts | FORCE artifact with evaluated identity, metadata and round-trip tests |
 | Tested prediction API and UI | Generic template service/client exists | Named FORCE inputs, units, support rejection, model identity, tests |
 | Logs, monitoring, rollback, incident | Template facilities; OPERATIONS.md still prompts | Exercise a real bounded failure and save diagnosis/recovery evidence |
@@ -51,7 +51,7 @@ Continue the bounded implementation while this compliance item remains open.
 
 ## Prioritized finish sequence
 
-1. Merge the evaluation decision record; complete FORCE product/dataset contracts.
+1. Evaluation record merged; product/dataset contracts written, pending their commit/merge.
 2. Build and test final fitting/artifacts/input support without test-label access.
 3. Evaluate reserved wells under the committed protocol and complete the model card.
 4. Adapt the minimal API/UI; exercise monitoring and rollback.

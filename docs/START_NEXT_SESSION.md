@@ -1,10 +1,10 @@
 # Resume the FORCE project
 
 Open C:\Users\lmora\INDE577\force-well-interpretation in VS Code.
-Read docs/SESSION_CHECKPOINT.md, docs/EVALUATION_PLAN.md and docs/REQUIREMENTS_AUDIT.md.
-Confirm commit/push/merge status of feature/evaluation-plan.
+Read SESSION_CHECKPOINT.md, EVALUATION_PLAN.md and REQUIREMENTS_AUDIT.md in docs/.
+Confirm commit/push/merge status of feature/product-data-contracts.
 
-Next complete FORCE product/dataset contracts, then implement final fitting,
-artifact provenance and input-support checks under the committed protocol.
-Test using synthetic/development data before opening the reserved wells.
-Do not rebuild the environment or add model families without a scope decision.
+Product and dataset contracts now describe FORCE rather than template prompts.
+Next build final fitting/artifacts/input support using the committed protocol.
+Verify synthetic/development isolation before any reserved-well scoring.
+No environment rebuild is needed. Final product operations and reporting remain.
