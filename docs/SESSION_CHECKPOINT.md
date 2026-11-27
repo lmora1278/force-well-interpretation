@@ -1,32 +1,28 @@
 # Session checkpoint
 
-Updated November 25, 2026. Owner: Liam Mora.
-Branch: feature/evaluation-plan.
+Updated November 26, 2026. Owner: Liam Mora.
+Branch: feature/product-data-contracts.
 
-## Completed this milestone
+## Completed
 
-- Robustness notebook merged into main (8583c43).
-- Inspected supplied assignment/checklist, current implementations, service/artifact
-  scaffolding and unfinished product documentation.
-- Added EVALUATION_PLAN.md: selected tree, retained comparisons, fixed fitting on
-  78 development wells, 20 reserved wells, metrics, input support and provenance.
-- Added REQUIREMENTS_AUDIT.md separating implemented evidence from remaining work.
-- Corrected the older implementation plan's regularization/threshold wording to
-  match the implemented unregularized classifier and retained 0.5 threshold.
-- No final-test scoring, refitting, code change, commit or remote publication.
+- Evaluation plan merged in ca555b6; decision commit 06e82d4.
+- Replaced product-contract prompts with FORCE users, tasks, scope, evaluation,
+  input/output policy, intended system behavior and implementation status.
+- Completed dataset provenance, schema, eligibility, access, CI fixture and limits.
+- Updated the requirements audit to distinguish documented contracts from
+  still-pending implementation. No final fits or reserved-well scoring performed.
 
 ## Next
 
-Commit/push this documentation milestone and merge after remote checks pass.
-Then complete product/dataset contracts and implement the frozen final evaluation
-and artifact pipeline, tested with synthetic/development data before final scoring.
-Align the configuration's regression metric with actual MAE-based selection.
-Keep all reserved wells excluded until the committed execution gates are met.
-
-Resolve broader applicable-algorithm wording before full compliance sign-off.
-API/UI adaptation, operational exercise, model card, release and presentation remain.
+Commit and push this milestone, then merge after automated checks pass.
+Next implement the frozen final fitting/artifact pipeline and support bounds,
+testing synthetic/development boundaries before reserved scoring. Align both
+config and adapter regression-metric declarations with MAE-based selection.
+FORCE API/UI, operations exercise, model card, solo ownership, release and
+presentation remain. Broader algorithm-scope wording remains an open audit item.
 
 ## Verification
 
-Documentation was checked against existing model parameters, sampling and prior
-results. No numerical experiments were rerun for this documentation-only milestone.
+Documentation checked against the saved evaluation plan, data adapter, manifest,
+development counts and synthetic-fixture tests. No numerical reruns are needed
+for this documentation-only milestone. No commit or remote publication performed.
