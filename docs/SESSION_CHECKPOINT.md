@@ -1,30 +1,27 @@
 # Session checkpoint
 
 Updated November 26, 2026. Owner: Liam Mora.
-Branch: feature/final-model-artifacts.
+Branch: feature/final-evaluation.
 
 ## Completed
 
-- Product/data contracts merged in e57cacb.
-- Added frozen candidate fitting, training-only support bounds and provenance.
-- Added non-overwriting bundles with integrity-checked trusted local loading.
-- Require convergence and a clean source revision for the field-data artifact command.
-- Aligned FORCE adapter/config metric declarations with actual MAE selection.
-- Saved reproduction steps in FINAL_MODEL_ARTIFACTS.md.
-- Synthetic checks passed; full field-data artifact creation is deferred until merge.
-- No final-test scoring, commit, push or remote publication performed here.
+- Final fitting code merged in 1234a2d; user created artifacts/force_final/v1.
+- Verified its integrity, 78 development wells, 20 excluded wells, 19,500
+  sampled observations per task, and convergence of all iterative fits.
+- Added final evaluator and synthetic scoring/report tests without opening real
+  held-out scores. It retains all eligible predictions and support/rock/well
+  metrics without fitting or changing selection.
+- Saved implementation and execution steps in FINAL_EVALUATION.md.
 
 ## Next
 
-Commit/push and merge this milestone after automated checks pass. Pull merged
-main locally, then create the next branch. With a clean revision, fit the actual
-78 development wells and inspect the saved artifact without scoring the 20
-reserved wells. Implement/test final evaluation separately before opening scores.
-See EVALUATION_PLAN.md for the immutable evaluation decisions.
-
-API/UI adaptation, model card, operations exercise, ownership documentation,
-release and presentation remain. Broader algorithm-scope wording is still open.
+Commit/push and merge after checks pass. Then pull main and run the documented
+final evaluation from a clean checkout, preserving the immutable v1 artifact.
+Inspect final results and prepare the model card and final narrative.
+API/UI, operational evidence, ownership, release and presentation still remain.
+The broader applicable-algorithm wording remains an open compliance item.
 
 ## Verification
 
-Focused artifact/data checks: 23 passed. Full suite: 145 passed in 326.41 seconds, with two existing non-blocking dependency warnings. Ruff and whitespace checks passed. The command help entry point was checked without starting a field-data fit.
+Training artifact integrity verified. Evaluator checks use synthetic data only.
+The real 20-well final test remains unscored. All 28 targeted evaluator, artifact and data-boundary tests passed in 6.52 seconds. Ruff and whitespace checks passed. The full notebook suite was not rerun for this additive evaluator milestone.
